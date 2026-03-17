@@ -3,25 +3,23 @@ using namespace std;
 
 int main(){
 
-    int n, result = 0;
+    long long n;
 
     cin >> n;
-    
 
-    if(n % 2 != 0){
-    result = 3*n+1;
-            for(int i = n/2; result !=1; i--){
-                result = n/2;
-                n-= result;
-                cout << result << "\t";
-            }
-    }else{
-        for(int i = n/2; result !=1; i--){
-            result = n/2;
-            n-= result;
-           cout << result << "\t";
-        }
+    cout << n << " ";
+
+    
+       while(n != 1){
+            if(n % 2 != 0){        
+             n = 3*n + 1;
+            cout << n << " ";
+    }else{   n = n/2;
+            cout << n << " ";
     }
+    }
+        
+    
 
     return 0;
 }
