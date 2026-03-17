@@ -3,11 +3,11 @@ using namespace std;
 
 int main(){
 
-    int n, cont = 1;
+    long long cont = 0, dif = 0, n;
 
     cin >> n;
 
-    vector<int> vet(n);
+    vector<long long> vet(n);
     
 
     for(int i = 0; i < n; i++){
@@ -15,25 +15,17 @@ int main(){
     }
     
     
-    int troca = 1;
-    while(troca){
-        troca = 0;
-        for(int i = n; i < 0; i--){
-            if(vet[i] < vet[i-1]){
-                int aux = vet[i];
-                vet[i] = vet[i-1];
-                vet[i-1] = aux;
-                troca = 1;
-                cont ++;
+    
+        for(int i = 1; i < n; i++){
+            if(vet[i-1] > vet[i]){
+               dif = vet[i-1] - vet[i];
+                vet[i] += dif;
+                cont += dif;
+        
             }
-                 
-        }  
+
     }
-    if(cont != 1){
-     cout << cont;
-    }else{
-        cout << "0";
-    }
+   cout << cont;
 
     return 0;
 }
