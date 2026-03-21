@@ -8,6 +8,9 @@ int main(){
 
     if(n == m -1 || n == m+1){
         cout << "No";
+
+    }else if(n%2 != m){
+        cout << "No";
     }else{
         cout << "Yes";
     }
