@@ -1,22 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-<<<<<<< HEAD
+
 #define el "\n";
-
-int main(){
-
-    int q;
-
-    cin >> q;
-
-    vector<int>p;
-
-    while(q--){
-        cin >> int x;
-        p.push_back(x);
-    }
-
-=======
 
 int main(){
 
@@ -43,6 +28,5 @@ int main(){
     }
 
 
->>>>>>> 73616f8b149bc05e7fe05244a6c9947a7662f79d
     return 0;
 }
