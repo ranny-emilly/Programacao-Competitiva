@@ -2,6 +2,8 @@
 using namespace std;
 #define el "\n";
 
+//EM DESENVOLVIMENTO
+
 int main(){
 int npratos, mpimenta, total=0;
 
