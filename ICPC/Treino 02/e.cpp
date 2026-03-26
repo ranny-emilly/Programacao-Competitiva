@@ -16,21 +16,23 @@ int main(){
 
         for(int j = 0; j < t; j++){
             cin >> num;
+            
             m[num]++;
+
         }
-         bool ordena = 1;
-         while(t--){
-        if(m[num] != 1 && m[num]!= 0){
-            ordena = 0;
+        bool ordena = true;
+        for (auto const& [num, qtd] : m){
+            if(qtd > 1){
+            ordena = false;
             cout << "No" << endl;
             break;
         }else{
-           ordena = 1;
+           ordena = true;
         }
-    }
-     if(ordena == 1){
-        cout << "Yes";
-    }   
+        
+}           if (ordena) {
+    cout << "Yes" << endl;
+        }      
     }
 
     return 0;
