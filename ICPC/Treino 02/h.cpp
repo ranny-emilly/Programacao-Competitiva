@@ -1,4 +1,3 @@
-//CODIGO EM DESENVOLVIMENTO
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,11 +16,14 @@ int main(){
             m[num]++;
         }else if(op == 2){
             cin >> num >> sub;
-            m[num]= m[num]-sub;
+            m[num]= m[num]-(1*sub);
+            if(m[num] <= 0){
+                m.erase(num);
+            }
         }else{
             if (!m.empty()) {
-            int menor = m.begin()->first;  // Primeira chave (menor)
-            int maior = m.rbegin()->first; // Última chave (maior)
+            int menor = m.begin()->first;  
+            int maior = m.rbegin()->first; 
             int result = maior - menor;
             cout << result << endl;
             }
