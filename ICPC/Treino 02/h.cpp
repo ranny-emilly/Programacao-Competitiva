@@ -5,6 +5,7 @@ int main(){
     int testes, op, sub, maior;
     
     cin >> testes;
+    
     map<int, int>m;
     int num;
 
