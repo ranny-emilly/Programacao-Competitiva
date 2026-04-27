@@ -5,19 +5,34 @@ using namespace std;
 #define el "\n";
 
 int main(){
+    int n, m, k;
+    cin >> n >> m >> k;
 
-   int n, m, k, jogador;
+    vector<int> jogadores(m + 1); 
+    for(int i = 0; i < m + 1; i++){
+        int x;
+        cin >> x;
+        jogadores.push_back(x);
+    }
 
-   cin >> n >> m >> k;
+    int fedor = jogadores[m]; 
+    //cout << fedor;
+    
 
-   m +=1;
-   n-=1;
+    int amigos = 0;
 
-   for(int i = 1; i < m; i++){
-    cin >> jogador;
-   }
 
-   //transformar em bin, comparar bit a bit e se a diferença de bits for <= k, então é amigo.
+    for(int i = 0; i < m; i++){
+        
+        int dif = jogadores[i] ^ fedor;
+
+        int bitsbits = __builtin_popcount(dif);
+            if(bitsbits <= k){
+            amigos++;
+        }
+    }
+
+    cout << amigos << el;
 
     return 0;
 }
