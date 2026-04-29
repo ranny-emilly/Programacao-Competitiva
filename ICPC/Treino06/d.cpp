@@ -17,9 +17,9 @@ int main(){
         cin >> y;
         vec.push_back(y);
     }
-    vector <int> pre;
+    vector <int> pre(a + 1);
 
-    pre.push_back(0);
+    pre[0] = 0;
 
     for (int i = 0; i <= a; i++) {
         pre[i + 1] = pre[i] ^ vec[i];
