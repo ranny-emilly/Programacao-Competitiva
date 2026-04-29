@@ -8,9 +8,9 @@ int main(){
     _;
     int n, q;
     vector <int> vec;
-    int a = n;
-
+    
     cin >> n >> q;
+    int a = n;
 
     while(n--){
         int y;
@@ -21,15 +21,17 @@ int main(){
 
     pre.push_back(0);
 
-    for (int i = 1; i <= a; i++) {;
-        //faz um push ai mona e arruma a formula do vec anterior 
-        pre[i] = pre[i - 1] + x;
+    for (int i = 0; i <= a; i++) {
+        pre[i + 1] = pre[i] ^ vec[i];
+      
     }
+
 
     while(q--){
         int a, b;
         cin >> a >> b;
-        cout << pre[a] - pre[b-1] << el;
+        int res = pre[b] ^ pre[a-1];
+        cout << res << el; 
 
     }
 
