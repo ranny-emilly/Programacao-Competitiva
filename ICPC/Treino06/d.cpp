@@ -8,6 +8,7 @@ int main(){
     _;
     int n, q;
     vector <int> vec;
+    int a = n;
 
     cin >> n >> q;
 
@@ -18,11 +19,10 @@ int main(){
     }
     vector <int> pre;
 
-    pre[0] = 0;
+    pre.push_back(0);
 
-    for (int i = 1; i <= n; i++) {
-        int x;
-        cin >> x;
+    for (int i = 1; i <= a; i++) {;
+        //faz um push ai mona e arruma a formula do vec anterior 
         pre[i] = pre[i - 1] + x;
     }
 
