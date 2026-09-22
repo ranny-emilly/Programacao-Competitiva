@@ -7,6 +7,8 @@ using namespace std;
 
 int main(){_
 
+    //usar map p guardar num e o inv;
+
     int n;
     cin >> n;
 
