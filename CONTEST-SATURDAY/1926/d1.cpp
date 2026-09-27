@@ -9,9 +9,8 @@ int main(){_
 
     int n;
     cin >> n;
-
         while (n--) {
-        
+                
         int a;
         cin >> a; 
 
@@ -26,21 +25,14 @@ int main(){_
             //cout << "mp[at] = " << mp[at] << el;                              
             if (mp[at] == 0) {
                 gp++;
-                
-                int inv = INT_MAX ^ at;
-                
+                int inv = INT_MAX ^ at;                
                 mp[inv]++;
                 //cout << "mp[inv] " << mp[inv] << el;
-                
-            } else {
-
+            }else{
                 mp[at]--;
             }
         }
-
-                cout << gp << "\n";
-
-
+          cout << gp << el;
     }
 
     return 0; 

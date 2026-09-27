@@ -12,11 +12,25 @@ int main(){_
     cin >> n;
     int a = 0;
 
+    if(n == 1){
+        cout << 1 << el;
+        return 0;
+    }
+    if(n < 4){
+        cout << "NO SOLUTION" << el;
+        return 0;
+
+    }else if(n == 4){
+        cout << 2 << " " << 4 << " " << 1 << " " << 3 << el;
+        return 0;
+    }
     vector<int>imp(n, 0);
     for(int i = n; i > 0; i--){
         if(i%2==0){
             imp[a] = i;
             a++;
+        }else{
+            imp[a] = 0;
         }
     }
     for(int i = n; i > 0; i--){
@@ -31,6 +45,6 @@ int main(){_
     }
 
     cout << el;
-
     return 0;
-}    int a = 0;
+
+}   // int a = 0;
