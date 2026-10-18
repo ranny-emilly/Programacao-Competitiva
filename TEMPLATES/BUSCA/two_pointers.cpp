@@ -2,12 +2,13 @@
 using namespace std;
 
 #define el "\n"
-#define _ ios_base::sync_with_stdio(0); cin.tie(0);
+#define _ ios_base::sync_with_stdio(0);cin.tie(0);
 
 int main() {
     _
 
-    // two pointers basico para subarray com numeros positivos
+    // two pointers basico para subarray com numeros nao negativos
+    // A janela só funciona para soma <= limite se os valores forem não negativos.
     int n;
     long long limite;
     cin >> n >> limite;

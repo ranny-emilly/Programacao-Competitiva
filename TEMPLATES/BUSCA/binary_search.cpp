@@ -2,7 +2,7 @@
 using namespace std;
 
 #define el "\n"
-#define _ ios_base::sync_with_stdio(0); cin.tie(0);
+#define _ ios_base::sync_with_stdio(0);cin.tie(0);
 
 int main() {
     _
@@ -18,6 +18,7 @@ int main() {
 
     sort(numeros.begin(), numeros.end());
 
+    // n == 0 também funciona: direita começa em -1 e o laço não executa.
     int esquerda = 0;
     int direita = n - 1;
     bool encontrei = false;

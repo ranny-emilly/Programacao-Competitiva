@@ -2,7 +2,7 @@
 using namespace std;
 
 #define el "\n"
-#define _ ios_base::sync_with_stdio(0); cin.tie(0);
+#define _ ios_base::sync_with_stdio(0);cin.tie(0);
 
 long long calcular_mdc(long long a, long long b) {
     // euclides para mdc

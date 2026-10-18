@@ -2,7 +2,7 @@
 using namespace std;
 
 #define el "\n"
-#define _ ios_base::sync_with_stdio(0); cin.tie(0);
+#define _ ios_base::sync_with_stdio(0);cin.tie(0);
 
 vector<vector<int>> grafo;
 vector<bool> visitado;
@@ -31,6 +31,7 @@ int main() {
         int u, v;
         cin >> u >> v;
 
+        // Este exemplo espera vertices de 0 a n-1.
         grafo[u].push_back(v);
         grafo[v].push_back(u);
     }
