@@ -3,10 +3,10 @@ using namespace std;
 
 #define _ ios_base::sync_with_stdio(0);cin.tie(0);
 
-// Definindo um bitset de 32 bits usando typedef para facilitar
+// Definindo um bitset de 32 bits usando typedef 
 typedef bitset<32> _32bits;
 
-// Podemos também criar de tamanhos menores para visualização mais fácil no terminal
+// de tamanhos menores para visualização mais fácil no terminal
 typedef bitset<8> _8bits;
 
 int main() { _
@@ -17,7 +17,7 @@ int main() { _
     _32bits b_num(num);
     cout << "Inteiro (" << num << ") para bitset: " << b_num << endl;
     
-    _8bits b_str("101100"); // Note que preenche com zeros a esquerda pra completar os 8 bits
+    _8bits b_str("101100"); // preenche com zeros a esquerda pra completar os 8 bits
     cout << "String (\"101100\") para bitset: " << b_str << endl;
     
     _8bits b_vazio; // Inicializa tudo com 0
