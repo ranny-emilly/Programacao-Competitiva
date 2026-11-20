@@ -8,42 +8,44 @@ using namespace std;
 
 typedef long long ll;
 
+
 void solve(int a){_
     
     string s;
     cin >> s;
 
-    int mod = 0;
-
-    for(int i = 1; i <= a; i++){
-        mod+=i;
+    vector<ll>sum(a);
+    ll total = 0;
+    vector<ll>ganhos(a);
+    
+    for(int i = 0; i < a; i++){
+     if(s[i] == 'L'){
+        sum[i] = i;
+     }else{
+        sum[i] = a - i - 1;
+     }
+     total+=sum[i];
     }
 
+
     for(int i = 0; i < a; i++){
-        if(i < s.size()/2){
-            if(s[i] == 'L'){
-                s[i] = 'R';
-            }
-        }else{
-            if(s[i]=='R'){
-                s[i] = 'L';
-            }
+        if(s[i] == 'L' && (a-i-1) > sum[i]){
+            ganhos[i] = (a - i - 1) - i;
+        }if(s[i] == 'R' && i > sum[i]){
+            ganhos[i] = i - (a - i - 1);   
         }
+    }
 
-        cout << s;
-        ll sum = 0;
-          for(int j = 0; j < a; j++){
-            if(s[j] == 'R'){
-                sum+=s.size()-(i+1);
-            }else{
-                sum+= s.size()-i;
-            }
-          }
-          cout << sum << " ";
+    sort(ganhos.rbegin(), ganhos.rend());
+    for(int i = 0; i < a; i++){
 
-    }  
+        //cout << ganhos[i]+sum[i] << " "; 
+        total += ganhos[i];
+        cout << total << " ";
+    }
 
-    cout << el
+
+    cout << el;
 
    
 }
